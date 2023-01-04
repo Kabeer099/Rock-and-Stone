@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css/style.css">
+    <link rel="stylesheet" href="script.js">
+    <title>Register form</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js" integrity="sha512-Dm5UxqUSgNd93XG7eseoOrScyM1BVs65GrwmavP0D0DujOA8mjiBfyj71wmI2VQZKnnZQsSWWsxDKNiQIqk8sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+/* #contact {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  */
+/* Pretty Stuff */
+.contact-form-container {
+  background: #F4F3F3;
+  font-family: "Lato", sans-serif;
+}
+ 
+.contact-us {
+  position: relative;
+  width: 250px;
+  background: #C3E0EC;
+  overflow: hidden;
+}
+.contact-us:before {
+  position: absolute;
+  content: "";
+  bottom: -50px;
+  left: -100px;
+  height: 250px;
+  width: 400px;
+  background: #F8B7D8;
+  transform: rotate(25deg);
+}
+.contact-us:after {
+  position: absolute;
+  content: "";
+  bottom: -80px;
+  right: -100px;
+  height: 270px;
+  width: 400px;
+  background: #9ED8EB;
+  transform: rotate(-25deg);
+}
+ 
+.contact-header {
+  color: white;
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 120px;
+  left: -40px;
+}
+.contact-header h1 {
+  font-size: 1.5rem;
+}
+ 
+.social-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 75px;
+  z-index: 1;
+  width: 100px;
+}
+.social-bar ul {
+  list-style-type: none;
+}
+.social-bar ul li {
+  display: inline-block;
+  color: white;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  margin-right: -4px;
+  font-size: 1.2rem;
+}
+ 
+.header {
+  text-align: center;
+  padding: 20px 0;
+  color: #444;
+}
+.header h1 {
+  font-weight: normal;
+}
+.header h2 {
+  margin-top: 10px;
+  font-weight: 300;
+}
+ 
+.address, .email, .phone {
+  text-align: center;
+  padding: 20px 0;
+  color: #444;
+}
+.address h3, .email h3, .phone h3 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: whitesmoke;
+}
+.address i, .email i, .phone i {
+  color:   #F8B7D8;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+ 
+form {
+  position: relative;
+  width: 440px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+form input, form textarea {
+  background: white;
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  border: 0;
+}
+form input {
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+  font-size: 1rem;
+  color: rgba(68, 68, 68, 0.8);
+}
+form textarea {
+  border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: lato;
+  color: rgba(68, 68, 68, 0.8);
+}
+form button {
+  position: absolute;
+  display: block;
+  height: 40px;
+  width: 250px;
+  left: 95px;
+  border: 0;
+  border-radius: 20px;
+  bottom: -20px;
+  background: #9ED8EB;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 300;
+  outline: none;
+}
+form button:hover{
+    background-color: #F8B7D8;
+}
+ 
+.contact-form {
+  padding-bottom: 40px;
+}
+ 
+/* Layout Stuff */
+#contact{
+  background:linear-gradient(rgba(24, 130, 192, 0.3),rgba(0,0,0,3)), url('./assets/img/bg\ st\'.jpg');
+  margin-top: 1rem;
+ 
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding-left: 15rem;
+  width: 100%;
+  height: 55rem;
+  
+}
+ 
+.contact-form-container {
+  width: 800px;
+  display: grid;
+  background-color:#91c8f282;
+ 
+ 
+  
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 2fr;
+  grid-template-areas: "contact-us header header header" "contact-us address phone email" "contact-us contact-form contact-form contact-form";
+}
+ 
+.contact-us {
+  grid-area: contact-us;
+}
+ 
+.header {
+  grid-area: header;
+}
+ 
+.address {
+  grid-area: address;
+}
+ 
+.phone {
+  grid-area: phone;
+}
+ 
+.email {
+  grid-area: email;
+}
+ 
+.contact-form {
+  grid-area: contact-form;
+}
+ 
+
+
+
+
+
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+    #box{
+    background-color:transparent ;
+    border: none;
+}
+
+#button{
+    background-color: #F8B7D8;
+}
+
+
+ a{
+    color: whitesmoke;
+ } 
+
+
+.header h3{
+
+    color: whitesmoke;
+
+}
+
+#passwordid{
+    width: 510px;
+}
+i{
+    cursor: pointer;
+}
+ 
+#iconshow{
+    margin-left: -1px;
+}
+#iconhide{
+    margin-left: -1px;
+    display: none;
+}
+.terms{
+    margin-left: 1rem;
+}
+/* .hiwa{
+    margin-left: 3rem;
+}
+.account{
+    margin-left: 7.8rem;
+    color: black;
+} */
+
+
+ 
+</style>
+ 
+<body>
+   
+ 
+    
+     
+    <section id="contact" class="contact" style="padding-top: 5rem;">
+        <div class="container">
+   
+          <div class="section-title"
+          >
+            <div class="contact-form-container">
+              <div class="contact-us">
+                <div class="contact-header">
+                  <h1>
+                    &#9135;&#9135;&#9135;&#9135;&nbsp;&nbsp;REGISTER
+                  </h1>
+                </div>
+                <div class="social-bar">
+                  <ul>
+                      <li>
+                          <i class="fab fa-facebook-f"></i>
+                        </li>
+                        <li>
+                          <i class="fab fa-twitter"></i>
+                        </li>
+                        <li>
+                          <i class="fab fa-instagram"></i>
+                        </li>
+                        <li>
+                          <i class="fab fa-dribbble"></i>
+                        </li>
+                      
+                  </ul>
+                </div>
+              </div>
+              <div class="header">
+              
+                
+                    <h3>Get registed yourself !</h3>
+              </div>
+              <div class="address">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>
+                  Saddar, alamgir Rd
+                </h3>
+                <h3>
+                  KArachi, NY 535022
+                 
+                </h3>
+              </div>
+              <div class="phone">
+                <i class="fas fa-phone-alt"></i>
+                <h3>
+                  757 287 1608
+                </h3>
+              </div>
+              <div class="email">
+                <i class="fas fa-envelope"></i>
+                <h3>
+                  Rockparadise@gmail.com
+                </h3>
+              </div>
+              <div class="contact-form">
+                
+        <div class=""   id="box">
+            
+            <div class="col-md-12 p-3">
+                <input type="name"  id="nameid" placeholder=" Enter your name"  class="form-control"> <br> <br>
+                <input type="email"  id="emailid" placeholder=" Enter your email"  class="form-control"> <br> <br>
+                <input type="email"  id="numid" placeholder="Enter your number"  class="form-control"> <br> <br>
+                <div class="row">
+                  <div class="col-md-10 ">
+                    <input type="password"  id="passwordid" placeholder="Enter your password"  class="form-control"> <br> <br>
+                  </div>
+                 
+                  <div class="col-1 ">
+                    <i class="fa-solid fa-eye p-3 " onclick="myfun()" id="iconshow" ></i>
+                    <i class="fa fa-eye-slash p-3  "  onclick="myfun()" id="iconhide" ></i>
+                </div>
+                </div>
+              
+                
+                <button type="button" class="btn btn-basic col-md-12" onclick="registerfun()" id="button">SIGN IN</button><br><br>
+ 
+              
+            </div>
+        </div>
+        <a href="newlog.html" class="anchor"> Already have an account? login.</a>
+              </div>
+            </div>
+      
+   
+          </div>
+          </section>
+ 
+
+
+<script>
+  
+      
+function registerfun(){
+ 
+var namevar=document.getElementById('nameid').value;
+ 
+
+ 
+var emailvar=document.getElementById("emailid").value;
+ 
+var passwordvar=document.getElementById("passwordid").value;
+ 
+var numbervar=document.getElementById("numid").value;
+ 
+if(namevar=="" |emailvar=="" |passwordvar=="" | numbervar=="")
+{
+alert("please fill the form");
+}
+else{
+localStorage.setItem("namekey",namevar);
+localStorage.setItem("emailkey",emailvar)
+localStorage.setItem("passwordkey",passwordvar);
+localStorage.setItem("numberkey",numbervar);
+
+
+
+window.open("newlog.html")
+}
+
+
+
+}
+
+
+
+function myfun(){
+ 
+ var x =document.getElementById("passwordid")
+ if (x.type==="password"){
+    x.type="text";
+ 
+    document.getElementById("iconshow").style.display="inline-block";
+    document.getElementById("iconhide").style.display="none";
+ 
+}
+ 
+else{
+    x.type="password";
+    document.getElementById("iconshow").style.display="none";
+    document.getElementById("iconhide").style.display="inline-block";
+}
+
+
+}
+
+
+
+
+
+jQuery('#frm').validate({
+    rules:{
+    name:"required",
+    email:{
+    required:true,
+    email:true
+    },
+    password:{
+    required:true,
+    minlength:5
+    },
+    },messages:{
+    name:"Please enter your name",
+    email:{
+    required:"Please enter email",
+    email:"Please enter valid email",
+    },
+    password:{
+    required:"Please enter your password",
+    minlength:"Password must be 5 char long"
+    },
+    },
+    submitHandler:function(form){
+    form.submit();
+    }
+    });
+ 
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
+
+ 
+ 
+ 
